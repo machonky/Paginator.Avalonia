@@ -1,12 +1,13 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Paginator.Avalonia.Test"
-             x:Class="Paginator.Avalonia.Test.App">
+             x:Class="Paginator.Avalonia.Test.App"
+             RequestedThemeVariant="Default">
     <Application.DataTemplates>
         <local:ViewLocator/>
     </Application.DataTemplates>
 
     <Application.Styles>
-        <StyleInclude Source="avares://Citrus.Avalonia/Citrus.xaml"/>
+      <FluentTheme />
     </Application.Styles>
 </Application>

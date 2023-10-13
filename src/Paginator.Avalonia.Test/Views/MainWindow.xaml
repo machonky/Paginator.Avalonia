@@ -33,6 +33,6 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBox Text="{Binding I, Mode=OneWay}" FontSize="80"  FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center"></TextBox>
-        <controls:PaginatorControl Name="PaginatorControl" Grid.Row="1" PageCount="7" PageNumb="{Binding I,Mode=TwoWay}" />
+        <controls:PaginatorControl Name="PaginatorControl" Grid.Row="1" PageCount="{Binding PageCount, Mode=OneTime}" PageNumb="{Binding I,Mode=TwoWay}" />
     </Grid>
 </Window>

@@ -9,6 +9,8 @@ namespace Paginator.Avalonia.View
 {
     public class PaginatorControl : ContentControl
     {
+        int MinPageNumber = 1;
+
         public PaginatorControl()
         {
             NextClickCommand = ReactiveCommand.Create(NextClick);
@@ -57,10 +59,10 @@ namespace Paginator.Avalonia.View
             PageInfo = $"{PageNumb}..{PageCount}";
         }
 
-        private void PageNumbChanged(int i)
-        {
-            if (PageNumb != i) PageNumb = 1;
-        }
+        //private void PageNumbChanged(int i)
+        //{
+        //    if (PageNumb != i) PageNumb = 1;
+        //}
         public static readonly AvaloniaProperty<ReactiveCommand<Unit, Unit>> NextClickCommandProperty =
             AvaloniaProperty.Register<PaginatorControl, ReactiveCommand<Unit, Unit>>(nameof(NextClickCommand));
 
@@ -85,7 +87,7 @@ namespace Paginator.Avalonia.View
 
         private void PrevClick()
         {
-            PageNumb = PageNumb > 0 ? PageNumb - 1 : 0;
+            PageNumb = PageNumb > MinPageNumber ? PageNumb - 1 : MinPageNumber;
         }
 
         public static readonly AvaloniaProperty<ReactiveCommand<Unit, Unit>> EndClickCommandProperty =
@@ -113,7 +115,7 @@ namespace Paginator.Avalonia.View
 
         private void BeginClick()
         {
-            PageNumb = 0;
+            PageNumb = MinPageNumber;
         }
     }
 }

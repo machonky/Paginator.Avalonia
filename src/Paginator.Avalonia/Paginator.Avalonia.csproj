@@ -1,13 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>1.0.0</PackageVersion>
-        <Authors>Lary&lt;f98f96@gmail.com&gt;</Authors>
-        <PackageProjectUrl>https://github.com/CreateLab/Paginator.Avalonia</PackageProjectUrl>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageTags>Avalonia</PackageTags>
+      <TargetFramework>net7.0</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+      <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+      <PackageVersion>1.0.0</PackageVersion>
+      <Authors>Lary&lt;f98f96@gmail.com&gt;</Authors>
+      <PackageProjectUrl>https://github.com/CreateLab/Paginator.Avalonia</PackageProjectUrl>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <PackageTags>Avalonia</PackageTags>
     </PropertyGroup>
     <ItemGroup>
         <AvaloniaResource Include="**\*.xaml">
@@ -15,8 +17,8 @@
         </AvaloniaResource>
     </ItemGroup>
     <ItemGroup>
-      <PackageReference Include="Avalonia" Version="0.10.0" />
-      <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0" />
+      <PackageReference Include="Avalonia" Version="11.0.4" />
+      <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.4" />
     </ItemGroup>
 
 </Project>

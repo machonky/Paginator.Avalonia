@@ -7,6 +7,11 @@ namespace Paginator.Avalonia.Test.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
+        public MainWindowViewModel()
+        {
+            i = 1;
+        }
+
         private int i;
         public int I
         {
@@ -15,5 +20,7 @@ namespace Paginator.Avalonia.Test.ViewModels
         }
 
         public int D => 7;
+
+        public int PageCount { get { return 10; } }
     }
 }
